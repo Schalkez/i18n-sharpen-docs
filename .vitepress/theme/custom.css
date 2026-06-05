@@ -244,8 +244,14 @@ body:has(.apple-home) .VPNavBar.has-sidebar .content {
 }
 
 .apple-hero {
-  min-height: calc(100svh - 104px);
+  min-height: calc(100svh - 44px);
+  display: flex;
+  align-items: center;
   background: var(--apple-canvas);
+}
+
+.apple-hero__inner {
+  width: 100%;
 }
 
 .apple-hero__inner,
