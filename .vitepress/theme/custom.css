@@ -36,6 +36,16 @@
   --vp-button-brand-text: #0f172a;
   --vp-button-brand-hover-text: #0f172a;
   --vp-button-brand-active-text: #0f172a;
+
+  /* Apple dark mode variables */
+  --apple-ink: #ffffff;
+  --apple-muted: #86868b;
+  --apple-canvas: #000000;
+  --apple-parchment: #1d1d1f;
+  --apple-pearl: #151516;
+  --apple-tile-1: #1d1d1f;
+  --apple-tile-2: #151516;
+  --apple-hairline: #333333;
 }
 
 h1,
