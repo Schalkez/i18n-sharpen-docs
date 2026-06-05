@@ -92,3 +92,10 @@ npx i18n-sharpen prune --force
 
 ![Direct Pruner with Force Flag](/prune-force-demo.gif)
 
+#### Verification of Pruned Keys
+
+After pruning, you can see the cleaned translation keys directly in your Git diff (e.g., in VSCode):
+
+![VSCode Git Diff after Pruning](/prune-diff-demo.gif)
+
+
