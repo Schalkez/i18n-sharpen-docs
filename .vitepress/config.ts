@@ -13,7 +13,7 @@ export default defineConfig({
       dark: '/logo-dark.svg',
       alt: 'i18n-sharpen'
     },
-    siteTitle: 'i18n-sharpen',
+    siteTitle: false,
     nav: [
       { text: 'Guide', link: '/guide/getting-started' },
       { text: 'CLI', link: '/guide/cli' },
