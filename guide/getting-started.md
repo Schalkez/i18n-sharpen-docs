@@ -76,8 +76,19 @@ npx i18n-sharpen extract
 
 ### 3. Prune Unused Keys
 
-Safely clean up unused keys from locale files. Run in dry-run mode by default, or run interactively:
+Safely clean up unused keys from locale files. Run interactively with a TUI picker:
 
 ```bash
-npx i18n-sharpen prune --interactive --force
+npx i18n-sharpen prune
 ```
+
+![Interactive Pruner TUI](/prune-demo.gif)
+
+Or use the `--force` flag to prune them all directly without confirmation:
+
+```bash
+npx i18n-sharpen prune --force
+```
+
+![Direct Pruner with Force Flag](/prune-force-demo.gif)
+
