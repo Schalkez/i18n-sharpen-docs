@@ -1,95 +1,38 @@
 ---
-layout: page
-pageClass: apple-design-page
-title: i18n-sharpen
-description: AST-based static analysis for i18n keys, dynamic patterns, and hardcoded strings.
+layout: home
+
+hero:
+  name: i18n-sharpen
+  text: AST-based Static Analysis for Localization
+  tagline: Keep your translation keys clean, synchronized, and type-safe — with the accuracy of a compiler, not a grep.
+  image:
+    src: /icon.svg
+    alt: i18n-sharpen logo — dark rounded square with bold 18 and an amber diagonal blade
+  actions:
+    - theme: brand
+      text: Get Started
+      link: /guide/getting-started
+    - theme: alt
+      text: View on GitHub
+      link: https://github.com/Schalkez/i18n-sharpen
+
+features:
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>'
+    title: AST-Based Parsing
+    details: Scans codebases using real compilers (TS, Vue, Svelte, Astro) to understand dynamic structures, template literals, and directives.
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>'
+    title: Hardcoded Detections
+    details: Automatically detects raw hardcoded strings in HTML text nodes or attributes and checks them against configurable ignore lists.
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg>'
+    title: Interactive Pruner (TUI)
+    details: Cleans up unused keys safely. Supports a command-line TUI picker to let you select which keys to keep or discard.
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>'
+    title: CI Markdown Reports
+    details: Generates beautiful coverage and quality reports (i18n-coverage.md) that integrate perfectly into your PR comments.
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>'
+    title: Safe Writes & Guards
+    details: Protects against file corruption via atomic write-then-rename and prevents prototype pollution attacks.
+  - icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--vp-c-brand-1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>'
+    title: Zero-Cost Architecture
+    details: Lazy-loads framework compilers dynamically. Extremely lightweight package with zero bundled bloat.
 ---
-
-<main class="apple-home">
-  <section class="apple-band apple-hero">
-    <div class="apple-band__inner apple-hero__inner">
-      <div class="apple-hero__copy">
-        <p class="apple-eyebrow">Static analysis for localization</p>
-        <h1>i18n-sharpen</h1>
-        <p class="apple-lead">Keep translation keys synchronized, type-safe, and clean with compiler-aware analysis for TS, JS, Vue, Svelte, and Astro.</p>
-        <div class="apple-actions" aria-label="Primary actions">
-          <a class="apple-button apple-button--primary" href="/guide/getting-started">Get Started</a>
-          <a class="apple-button apple-button--secondary" href="/guide/cli">CLI Reference</a>
-        </div>
-      </div>
-      <figure class="apple-product apple-product--icon">
-        <img src="/icon.svg" alt="i18n-sharpen icon" />
-      </figure>
-    </div>
-  </section>
-
-  <section class="apple-band apple-band--dark">
-    <div class="apple-band__inner apple-split">
-      <div class="apple-copy">
-        <p class="apple-eyebrow">AST-aware detection</p>
-        <h2>Find what grep misses.</h2>
-        <p>Real parsers understand template literals, framework files, directives, and dynamic key patterns before they become release noise.</p>
-      </div>
-      <figure class="apple-product apple-product--terminal" aria-label="Example terminal report">
-        <pre><code>$ i18n-sharpen scan
-✓ locales synchronized
-✓ 84 dynamic patterns resolved
-! 7 hardcoded strings found
-! 3 unused keys ready to prune</code></pre>
-      </figure>
-    </div>
-  </section>
-
-  <section class="apple-band apple-band--parchment">
-    <div class="apple-band__inner apple-stack">
-      <div class="apple-copy apple-copy--center">
-        <p class="apple-eyebrow">Quality report</p>
-        <h2>Every locale, accounted for.</h2>
-        <p>Coverage, missing keys, unused keys, and hardcoded strings are grouped into a PR-ready report without adding runtime weight to your app.</p>
-      </div>
-      <div class="apple-metrics" aria-label="i18n-sharpen report highlights">
-        <div>
-          <span>6</span>
-          <p>frameworks scanned</p>
-        </div>
-        <div>
-          <span>0</span>
-          <p>bundled compilers</p>
-        </div>
-        <div>
-          <span>1</span>
-          <p>markdown report</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="apple-band apple-band--black">
-    <div class="apple-band__inner apple-split apple-split--reverse">
-      <figure class="apple-product apple-product--report" aria-label="Example markdown report">
-        <div class="report-line report-line--strong">i18n coverage</div>
-        <div class="report-row"><span>Missing keys</span><strong>2</strong></div>
-        <div class="report-row"><span>Unused keys</span><strong>11</strong></div>
-        <div class="report-row"><span>Hardcoded strings</span><strong>7</strong></div>
-        <div class="report-rule"></div>
-        <div class="report-line">Safe writes use atomic rename.</div>
-      </figure>
-      <div class="apple-copy">
-        <p class="apple-eyebrow">Safe writes and guards</p>
-        <h2>Clean up keys without gambling on files.</h2>
-        <p>The pruner uses atomic write-then-rename behavior and guards against unsafe object paths, so cleanup stays predictable in local runs and CI.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="apple-band apple-band--light apple-final">
-    <div class="apple-band__inner apple-copy apple-copy--center">
-      <p class="apple-eyebrow">Start precise</p>
-      <h2>Run the analyzer before stale keys ship.</h2>
-      <div class="apple-actions apple-actions--center" aria-label="Footer actions">
-        <a class="apple-button apple-button--primary" href="/guide/getting-started">Read the guide</a>
-        <a class="apple-link" href="https://github.com/Schalkez/i18n-sharpen">View on GitHub</a>
-      </div>
-    </div>
-  </section>
-</main>
