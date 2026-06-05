@@ -32,7 +32,7 @@ export default defineConfig({
       { text: 'Guide', link: '/guide/getting-started' },
       { text: 'CLI', link: '/guide/cli' },
       { text: 'Config', link: '/guide/configuration' },
-      { text: 'GitHub', link: 'https://github.com/Schalkez/i18n-sharpen' }
+      { text: 'npm', link: 'https://www.npmjs.com/package/i18n-sharpen' }
     ],
     sidebar: [
       {
@@ -64,6 +64,7 @@ export default defineConfig({
       }
     ],
     socialLinks: [
+      { icon: 'npm', link: 'https://www.npmjs.com/package/i18n-sharpen' },
       { icon: 'github', link: 'https://github.com/Schalkez/i18n-sharpen' }
     ],
     footer: {
