@@ -1,14 +1,14 @@
 :root {
-  /* Apple & Ink-Amber Brand Accent Colors */
-  --vp-c-brand-1: #F59E0B; /* Amber brand color from logo */
-  --vp-c-brand-2: #D97706; /* Darker Amber for hover */
+  /* Brand Accent Colors */
+  --vp-c-brand-1: #F59E0B;
+  --vp-c-brand-2: #D97706;
   --vp-c-brand-3: #B45309;
-  
+
   --vp-c-brand-soft: rgba(245, 158, 11, 0.14);
-  
-  /* Apple Typography */
-  --vp-font-family: "SF Pro Text", "Inter", system-ui, -apple-system, sans-serif;
-  --vp-font-family-mono: "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+  /* Typography — Inter from Google Fonts CDN (cross-platform) */
+  --vp-font-family: "Inter", system-ui, -apple-system, sans-serif;
+  --vp-font-family-mono: "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas, monospace;
 }
 
 .dark {
@@ -17,10 +17,10 @@
   --vp-c-brand-3: #FCD34D;
 }
 
-/* Custom styles for professional Apple look */
+/* Headings — tight tracking, heavy weight */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "SF Pro Display", "Inter", system-ui, -apple-system, sans-serif;
-  letter-spacing: -0.02em; /* Apple tight tracking display */
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .vp-doc h1 {
@@ -33,23 +33,79 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.3em;
 }
 
-/* Rounded pills for buttons, matching Apple's rounded.pill */
+/* Pill-shaped buttons */
 .VPButton.brand {
-  border-radius: 9999px !important; /* Action Blue / Amber pill */
+  border-radius: 9999px !important;
   font-weight: 600;
-  transition: transform 0.1s ease;
+  transition: all 0.2s ease;
+}
+
+.VPButton.brand:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
 }
 
 .VPButton.brand:active {
-  transform: scale(0.96); /* Apple scale-press micro-animation */
+  transform: scale(0.96);
+}
+
+.VPButton.brand:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 
 .VPButton.alt {
   border-radius: 9999px !important;
   font-weight: 600;
-  transition: transform 0.1s ease;
+  transition: all 0.2s ease;
+}
+
+.VPButton.alt:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .VPButton.alt:active {
   transform: scale(0.96);
+}
+
+.VPButton.alt:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+/* Feature cards — cursor + hover lift */
+.VPFeature {
+  cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Sidebar links — smooth transitions */
+.VPSidebarItem .link {
+  transition: color 0.15s ease;
+}
+
+/* Accessibility — respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .VPButton.brand,
+  .VPButton.alt,
+  .VPFeature {
+    transition: none !important;
+  }
+  .VPButton.brand:active,
+  .VPButton.alt:active {
+    transform: none !important;
+  }
+  .VPFeature:hover {
+    transform: none !important;
+  }
 }

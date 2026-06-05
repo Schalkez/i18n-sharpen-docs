@@ -5,9 +5,23 @@ export default defineConfig({
   description: 'AST-based static analysis for i18n — finds missing keys, unused keys, dynamic patterns, and hardcoded strings across TS, JS, Vue, Svelte, and Astro.',
   cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' }]
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+    ['link', { href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap', rel: 'stylesheet' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'i18n-sharpen — AST-based i18n Static Analysis' }],
+    ['meta', { property: 'og:description', content: 'Find missing keys, unused keys, dynamic patterns, and hardcoded strings across TS, JS, Vue, Svelte, and Astro.' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }]
   ],
   themeConfig: {
+    search: {
+      provider: 'local'
+    },
+    outline: {
+      level: [2, 3],
+      label: 'On this page'
+    },
     logo: {
       light: '/logo-light.svg',
       dark: '/logo-dark.svg',
