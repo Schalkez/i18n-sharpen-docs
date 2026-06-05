@@ -247,11 +247,8 @@ body:has(.apple-home) .VPNavBar.has-sidebar .content {
   min-height: calc(100svh - 44px);
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--apple-canvas);
-}
-
-.apple-hero__inner {
-  width: 100%;
 }
 
 .apple-hero__inner,
@@ -367,8 +364,11 @@ body:has(.apple-home) .VPNavBar.has-sidebar .content {
 .apple-product--icon img {
   width: 320px;
   height: 320px;
-  border-radius: 18px;
+  border-radius: 70px; /* Aligns with the 14/64 corner radius ratio of the 320x320 SVG */
   box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+  background: transparent !important;
+  background-color: transparent !important;
+  overflow: hidden;
 }
 
 .apple-band--dark,
@@ -555,6 +555,7 @@ body:has(.apple-home) .VPNavBar.has-sidebar .content {
   .apple-product--icon img {
     width: 224px;
     height: 224px;
+    border-radius: 49px; /* 224 * (14/64) ratio */
   }
 }
 
