@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "SVG Logo Designer": {
+      "source": "rknall/claude-skills",
+      "sourceType": "github",
+      "skillPath": "svg-logo-designer/SKILL.md",
+      "computedHash": "c591208a052cc9f7deb77be1183e4627daf54dbf575ea2653f519f29fe3bd4c8"
+    },
+    "svg-logo-creator": {
+      "source": "kbravh/skills",
+      "sourceType": "github",
+      "skillPath": "svg-logo-creator/SKILL.md",
+      "computedHash": "e105598da8b01516c780f3077996ab902ba46b162ef7a9399a5c912ee23dab12"
+    },
+    "svg-logo-maker": {
+      "source": "discountry/logo-maker",
+      "sourceType": "github",
+      "skillPath": "skills/svg-logo-maker/SKILL.md",
+      "computedHash": "fb8f9ffabe8279e58e811d1433428294f68ba35893b919433cb264b6fdb772c1"
+    }
+  }
+}
