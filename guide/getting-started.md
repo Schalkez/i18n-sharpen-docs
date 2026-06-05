@@ -63,6 +63,9 @@ Ensure there are no missing keys, placeholder keys, or locale misalignment:
 npx i18n-sharpen validate
 ```
 
+![Demonstration of i18n-sharpen validate](/validate-demo.gif)
+
+
 ### 2. Extract New Keys
 
 Automatically extract key references from code and append them to JSON/YAML locale files:
