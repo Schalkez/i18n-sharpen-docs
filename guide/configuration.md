@@ -20,6 +20,9 @@ Here is a full list of available options:
 | `matchAttributes` | `string[]` | `["i18nKey", "id"]` | HTML/JSX attributes scanned for translation keys. |
 | `outputReport` | `string` | `"i18n-coverage.md"` | Path to write markdown quality report (`""` to disable). |
 | `localesLayout` | `"flat" \| "namespaced"` | `"flat"` | Locale directory layout under `localesDir`. |
+| `defaultNamespace` | `string` | `"common"` | Namespace used for keys without a prefix (`namespaced` layout only). |
+| `prune.force` | `boolean` | `false` | Make `prune` write by default without `--force` flag. |
+| `prune.cleanEmpty` | `boolean` | `false` | Delete empty namespace files after pruning. |
 | `looseKeyMatch` | `boolean` | `false` | If `true`, quoted matches of keys in raw code count as "used". |
 | `ignoreKeys` | `string[]` | `[]` | Glob patterns (e.g. `status.*`) to ignore during scans/prunes. |
 | `ignoreDynamicKeys` | `string[]` | `[]` | Glob prefixes to suppress from dynamic-key warnings. |
