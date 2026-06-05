@@ -4,6 +4,9 @@ export default defineConfig({
   title: 'i18n-sharpen',
   description: 'AST-based static analysis for i18n — finds missing keys, unused keys, dynamic patterns, and hardcoded strings across TS, JS, Vue, Svelte, and Astro.',
   cleanUrls: true,
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' }]
+  ],
   themeConfig: {
     logo: {
       light: '/logo-light.svg',
