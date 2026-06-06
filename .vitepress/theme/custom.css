@@ -1,3 +1,5 @@
+@import url('https://cdn.jsdelivr.net/npm/geist@1.0.3/dist/fonts/geist-sans/style.css');
+
 :root {
   /* Brand Accent Colors (Light Mode) - High contrast for WCAG AA compliance (Amber-700/800/900) */
   --vp-c-brand-1: #B45309; /* Contrast ratio 5.2:1 against white (passes AA) */
@@ -11,9 +13,9 @@
   --vp-button-brand-hover-text: #ffffff;
   --vp-button-brand-active-text: #ffffff;
 
-  /* Typography — Inter from Google Fonts CDN (cross-platform) */
-  --vp-font-family: "Inter", system-ui, -apple-system, sans-serif;
-  --vp-font-family-mono: "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas, monospace;
+  /* Typography — Geist Sans from CDN */
+  --vp-font-family-base: "Geist", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --vp-font-family-mono: "Geist Mono", "JetBrains Mono", "SF Mono", Menlo, Monaco, Consolas, monospace;
 }
 
 .dark {
@@ -32,32 +34,35 @@
 
 /* Headings — tight tracking, heavy weight */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: var(--vp-font-family-base);
   letter-spacing: -0.02em;
 }
 
 .vp-doc h1 {
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .vp-doc h2 {
-  font-weight: 700;
+  font-weight: 600;
   border-bottom: 1px solid var(--vp-c-divider);
   padding-bottom: 0.3em;
 }
 
-/* Industrial Buttons */
+/* Sleek Buttons (Vercel Style) */
 .VPButton.brand {
-  border-radius: 4px !important;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  font-family: var(--vp-font-family-mono);
-  transition: all 0.2s ease;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  font-family: var(--vp-font-family-base) !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
 }
 
 .VPButton.brand:hover {
   filter: brightness(1.1);
-  box-shadow: 0 0 20px var(--vp-c-brand-soft);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  transform: translateY(-1px);
 }
 
 .VPButton.brand:active {
@@ -70,17 +75,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .VPButton.alt {
-  border-radius: 4px !important;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  font-family: var(--vp-font-family-mono);
-  transition: all 0.2s ease;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  font-family: var(--vp-font-family-base) !important;
+  transition: all 0.2s ease !important;
+  background-color: var(--vp-c-bg-soft) !important;
+  border: 1px solid var(--vp-c-divider) !important;
 }
 
 .VPButton.alt:hover {
-  border-color: var(--vp-c-brand-1);
-  color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: var(--vp-c-bg-alt) !important;
+  border-color: var(--vp-c-divider) !important;
+  color: var(--vp-c-text-1) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dark .VPButton.alt:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .VPButton.alt:active {
@@ -203,25 +216,27 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-fill-color: initial !important;
 }
 
-/* The "i18n-sharpen" text -> Industrial overline/badge */
+/* The "i18n-sharpen" text -> Vercel Pill */
 .VPHero .name {
   display: inline-block;
-  font-family: var(--vp-font-family-mono);
-  font-size: 13px !important;
-  line-height: 1.2 !important;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px !important;
+  line-height: 1 !important;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
   color: var(--vp-c-brand-1) !important;
-  border: 1px solid var(--vp-c-brand-1);
-  padding: 4px 12px;
-  border-radius: 4px;
+  background: var(--vp-c-brand-soft) !important;
+  border: 1px solid transparent; /* seamless pill */
+  padding: 6px 14px;
+  border-radius: 9999px; /* full pill */
   margin-bottom: 24px;
-  box-shadow: 0 0 10px var(--vp-c-brand-soft);
+  box-shadow: none;
 }
 
 /* The main heading */
 .VPHero .text {
+  font-family: var(--vp-font-family-base) !important;
   font-size: 64px !important;
   line-height: 1.1 !important;
   font-weight: 800;
