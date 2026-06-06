@@ -92,35 +92,62 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 2px;
 }
 
-/* Feature cards — Industrial styling */
-.VPFeature {
+/* Feature cards — Control Panel Modules (Heavy Industrial) */
+.VPFeature, .VPFeature .box {
   cursor: default;
-  border-radius: 4px !important;
-  border: 1px solid transparent;
-  transition: all 0.2s ease;
+  border-radius: 0 !important;
+  transition: all 0.2s ease-out !important;
+}
+
+.VPFeature {
+  border: 1px solid var(--vp-c-border) !important;
+  border-left: 4px solid var(--vp-c-border) !important;
+  background: var(--vp-c-bg-soft) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.VPFeature .box {
+  background: transparent !important;
+  padding: 24px !important;
 }
 
 .VPFeature:hover {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-bg-soft);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px var(--vp-c-brand-soft);
+  border-left-color: var(--vp-c-brand-1) !important;
+  background: var(--vp-c-bg-alt) !important;
+  box-shadow: inset 2px 0 16px var(--vp-c-brand-soft) !important;
+}
+
+.dark .VPFeature:hover {
+  box-shadow: inset 2px 0 24px rgba(245, 158, 11, 0.15) !important;
 }
 
 .VPFeature .icon {
-  border-radius: 4px !important;
-  transition: border-color 0.2s ease;
+  background: transparent !important;
+  border: none !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin-bottom: 20px !important;
 }
 
 .VPFeature:hover .icon {
-  background: var(--vp-c-bg-mute);
+  filter: drop-shadow(0 0 8px var(--vp-c-brand-soft));
 }
 
 .VPFeature .title {
-  font-family: var(--vp-font-family-mono);
-  font-size: 14px;
-  letter-spacing: 0.05em;
-  font-weight: 700;
+  font-family: var(--vp-font-family-mono) !important;
+  font-size: 13px !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+  margin-bottom: 12px !important;
+}
+
+.VPFeature .details {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  color: var(--vp-c-text-2) !important;
 }
 
 /* Sidebar links — smooth transitions */
