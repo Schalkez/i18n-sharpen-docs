@@ -236,3 +236,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 24px;
   max-width: 480px;
 }
+
+/* Compress layout to fit Hero and Features within one viewport on desktop */
+@media (min-width: 960px) {
+  .VPHero {
+    padding-top: calc(var(--vp-nav-height) + 24px) !important;
+    padding-bottom: 24px !important;
+  }
+
+  .VPFeatures {
+    padding-top: 0 !important;
+  }
+}
