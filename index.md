@@ -7,7 +7,7 @@ hero:
   tagline: Keep your translation keys clean, synchronized, and type-safe — with the accuracy of a compiler, not a grep.
   image:
     src: /icon.svg
-    alt: i18n-sharpen logo — dark rounded square with bold 18 and an amber diagonal blade
+    alt: i18n-sharpen logo — dark rounded square with a steel dagger forming the “i” of i18n
   actions:
     - theme: brand
       text: Get Started
