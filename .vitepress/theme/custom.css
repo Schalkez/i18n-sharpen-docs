@@ -46,20 +46,22 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.3em;
 }
 
-/* Pill-shaped buttons */
+/* Industrial Buttons */
 .VPButton.brand {
-  border-radius: 9999px !important;
-  font-weight: 600;
+  border-radius: 4px !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: var(--vp-font-family-mono);
   transition: all 0.2s ease;
 }
 
 .VPButton.brand:hover {
   filter: brightness(1.1);
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 20px var(--vp-c-brand-soft);
 }
 
 .VPButton.brand:active {
-  transform: scale(0.96);
+  transform: scale(0.98);
 }
 
 .VPButton.brand:focus-visible {
@@ -68,18 +70,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .VPButton.alt {
-  border-radius: 9999px !important;
-  font-weight: 600;
+  border-radius: 4px !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: var(--vp-font-family-mono);
   transition: all 0.2s ease;
 }
 
 .VPButton.alt:hover {
-  filter: brightness(1.1);
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .VPButton.alt:active {
-  transform: scale(0.96);
+  transform: scale(0.98);
 }
 
 .VPButton.alt:focus-visible {
@@ -128,3 +133,48 @@ h1, h2, h3, h4, h5, h6 {
   height: 32px !important;
 }
 
+/* Hero Layout & Typography Override for Industrial Aesthetic */
+
+/* Reset Vitepress default gradients */
+.VPHero .name,
+.VPHero .text {
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* The "i18n-sharpen" text -> Industrial overline/badge */
+.VPHero .name {
+  display: inline-block;
+  font-family: var(--vp-font-family-mono);
+  font-size: 13px !important;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--vp-c-brand-1) !important;
+  border: 1px solid var(--vp-c-brand-1);
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  box-shadow: 0 0 10px var(--vp-c-brand-soft);
+}
+
+/* The main heading */
+.VPHero .text {
+  font-size: 64px !important;
+  line-height: 1.1 !important;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--vp-c-text-1) !important;
+}
+
+.dark .VPHero .text {
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+}
+
+.VPHero .tagline {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+  margin-top: 24px;
+  max-width: 480px;
+}
