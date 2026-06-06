@@ -2,7 +2,6 @@
 layout: home
 
 hero:
-  name: i18n-sharpen
   text: AST-Powered Localization
   tagline: Keep translation keys clean, synced, and type-safe with compiler-level accuracy.
   image:

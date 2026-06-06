@@ -210,28 +210,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Layout & Typography Override for Industrial Aesthetic */
 
 /* Reset Vitepress default gradients */
-.VPHero .name,
 .VPHero .text {
   background: none !important;
   -webkit-text-fill-color: initial !important;
-}
-
-/* The "i18n-sharpen" text -> Vercel Pill */
-.VPHero .name {
-  display: inline-block;
-  font-family: var(--vp-font-family-base);
-  font-size: 14px !important;
-  line-height: 1 !important;
-  font-weight: 500;
-  letter-spacing: normal;
-  text-transform: none;
-  color: var(--vp-c-brand-1) !important;
-  background: var(--vp-c-brand-soft) !important;
-  border: 1px solid transparent; /* seamless pill */
-  padding: 6px 14px;
-  border-radius: 9999px; /* full pill */
-  margin-bottom: 24px;
-  box-shadow: none;
 }
 
 /* The main heading */
