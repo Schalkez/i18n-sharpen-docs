@@ -92,19 +92,35 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 2px;
 }
 
-/* Feature cards — cursor + hover lift */
+/* Feature cards — Industrial styling */
 .VPFeature {
   cursor: default;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 4px !important;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
 }
 
 .VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px var(--vp-c-brand-soft);
 }
 
-.dark .VPFeature:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+.VPFeature .icon {
+  border-radius: 4px !important;
+  transition: border-color 0.2s ease;
+}
+
+.VPFeature:hover .icon {
+  background: var(--vp-c-bg-mute);
+}
+
+.VPFeature .title {
+  font-family: var(--vp-font-family-mono);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 /* Sidebar links — smooth transitions */
