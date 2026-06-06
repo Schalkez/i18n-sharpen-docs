@@ -3,11 +3,10 @@ layout: home
 
 hero:
   name: i18n-sharpen
-  text: AST-based Static Analysis for Localization
-  tagline: Keep your translation keys clean, synchronized, and type-safe — with the accuracy of a compiler, not a grep.
+  text: AST-Powered Localization
+  tagline: Keep translation keys clean, synced, and type-safe with compiler-level accuracy.
   image:
-    src: /hero-graphic.svg
-    alt: i18n-sharpen developer hero illustration — code editor and JSON translation syncing flow using the brand tanto dagger.
+    alt: i18n-sharpen hero illustration
   actions:
     - theme: brand
       text: Get Started
