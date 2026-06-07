@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--vp-c-text-1) !important;
-  max-width: 100% !important;
+  max-width: 540px !important;
   word-wrap: break-word;
 }
 
@@ -247,5 +247,19 @@ h1, h2, h3, h4, h5, h6 {
 
   .VPFeatures {
     padding-top: 0 !important;
+  }
+}
+
+/* Fix Hero Before/After overlap on mobile and tablet */
+@media (max-width: 959px) {
+  .VPHero .image-container {
+    height: auto !important;
+    min-height: 400px;
+  }
+  .VPHero .image {
+    margin-bottom: 24px !important;
+  }
+  .inspector-window {
+    margin: 0 auto !important;
   }
 }
