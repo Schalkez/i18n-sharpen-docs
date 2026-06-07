@@ -218,11 +218,13 @@ h1, h2, h3, h4, h5, h6 {
 /* The main heading */
 .VPHero .text {
   font-family: var(--vp-font-family-base) !important;
-  font-size: clamp(40px, 5vw, 64px) !important;
+  font-size: clamp(32px, 5vw, 64px) !important;
   line-height: 1.1 !important;
   font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--vp-c-text-1) !important;
+  max-width: 100% !important;
+  word-wrap: break-word;
 }
 
 .dark .VPHero .text {
@@ -234,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
   color: var(--vp-c-text-2);
   margin-top: 24px;
-  max-width: 480px;
+  max-width: min(100%, 480px);
 }
 
 /* Compress layout to fit Hero and Features within one viewport on desktop */
