@@ -95,7 +95,7 @@ const isFixed = ref(false)
   font-size: 13px;
   width: 100%;
   max-width: 640px;
-  margin: -80px 0 0 auto;
+  margin: 0 0 0 auto;
   color: var(--vp-c-text-1);
   transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s;
 }
