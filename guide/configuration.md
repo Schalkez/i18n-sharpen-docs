@@ -24,7 +24,7 @@ Here is a full list of available options:
 | `prune.force` | `boolean` | `false` | Make `prune` write by default without `--force` flag. |
 | `prune.cleanEmpty` | `boolean` | `false` | Delete empty namespace files after pruning. |
 | `looseKeyMatch` | `boolean` | `false` | If `true`, quoted matches of keys in raw code count as "used". |
-| `ignoreKeys` | `string[]` | `[]` | Glob patterns (e.g. `status.*`) to ignore during scans/prunes. |
+| `ignoreKeys` | `string[]` | `[]` | Glob patterns (e.g. `status.*`) to ignore during validation, checks, and pruning. |
 | `ignoreDynamicKeys` | `string[]` | `[]` | Glob prefixes to suppress from dynamic-key warnings. |
 | `pluralSuffixes` | `string[]` | *See below* | Plural suffixes to automatically match and preserve. |
 | `sortKeys` | `"alpha" \| "source" \| "preserve"` | `"preserve"` | Ordering of keys on writes. |
