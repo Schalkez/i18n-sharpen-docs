@@ -252,12 +252,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Fix Hero Before/After overlap on mobile and tablet */
 @media (max-width: 959px) {
-  .VPHero .image-container {
-    height: auto !important;
-    min-height: 400px;
+  .VPHero .main {
+    order: 1 !important;
   }
   .VPHero .image {
-    margin-bottom: 24px !important;
+    order: 2 !important;
+    margin: 48px auto 0 auto !important;
+    width: 100%;
+  }
+  .VPHero .image-container {
+    width: 100% !important;
+    max-width: 640px !important;
+    height: auto !important;
+    min-height: auto !important;
   }
   .inspector-window {
     margin: 0 auto !important;
