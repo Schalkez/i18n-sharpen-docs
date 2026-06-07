@@ -70,3 +70,25 @@ You can customize the default namespace in `i18n-sharpen.json` (defaults to `"co
 }
 ```
 *(With the configuration above, `t("welcome")` is resolved as `main:welcome`)*
+
+---
+
+## 3. Namespace Scoped Hooks (e.g. `next-intl`)
+
+For modern React/Next.js localization libraries like `next-intl` that scope translation functions within a namespace, `i18n-sharpen` automatically detects the namespace and prepends it to all nested translation keys.
+
+### Usage
+```typescript
+// Detects 'auth' namespace and resolves the key as 'auth.signIn'
+const t = useTranslations('auth');
+t('signIn'); 
+
+// Destructuring is also fully supported
+const { t } = useTranslation('common');
+t('cancel'); // Resolves as 'common.cancel'
+```
+
+Supported hooks out of the box:
+- `useTranslations` (Next-intl)
+- `useNamespace`
+- `useTranslation` (React-i18next)
