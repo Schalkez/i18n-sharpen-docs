@@ -48,7 +48,8 @@ export default defineConfig({
         items: [
           { text: 'Configuration', link: '/guide/configuration' },
           { text: 'Supported Formats', link: '/guide/formats' },
-          { text: 'Locale Layouts', link: '/guide/layouts' }
+          { text: 'Locale Layouts', link: '/guide/layouts' },
+          { text: 'Framework Integrations', link: '/guide/frameworks' }
         ]
       },
       {
