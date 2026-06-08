@@ -47,12 +47,13 @@ Vue projects typically use `vue-i18n`.
 
 ### Features
 - **SFC Compiler**: Utilizes `@vue/compiler-sfc` to compile and parse single-file components.
-- **Interpolation**: Parses mustache interpolation `{{ $t('key') }}` and `{{ t('key') }}` in Vue templates.
+- **Interpolation**: Parses mustache interpolation <span v-pre>`{{ $t('key') }}`</span> and <span v-pre>`{{ t('key') }}`</span> in Vue templates.
 - **Directives**: Fully supports Vue directives like `v-t="'key'"`.
 - **Dynamic Bindings**: Scans for bound attributes like `:placeholder="$t('search.placeholder')"`.
 
 ### Example
-```vue
+
+```vue{v-pre}
 <template>
   <div>
     <!-- 1. Mustache Interpolation -->
