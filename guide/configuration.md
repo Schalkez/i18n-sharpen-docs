@@ -26,6 +26,7 @@ Here is a full list of available options:
 | `looseKeyMatch` | `boolean` | `false` | If `true`, quoted matches of keys in raw code count as "used". |
 | `ignoreKeys` | `string[]` | `[]` | Glob patterns (e.g. `status.*`) to ignore during validation, checks, and pruning. |
 | `ignoreDynamicKeys` | `string[]` | `[]` | Glob prefixes to suppress from dynamic-key warnings. |
+| `autoIgnoreDynamicPrefixes` | `boolean` | `true` | Automatically treat structured-concat dynamic prefixes (e.g. `landing.hero.`) as wildcard ignores to protect them from pruning. |
 | `pluralSuffixes` | `string[]` | *See below* | Plural suffixes to automatically match and preserve. |
 | `sortKeys` | `"alpha" \| "source" \| "preserve"` | `"preserve"` | Ordering of keys on writes. |
 | `hardcoded.attributes` | `string[]` | *See below* | HTML/JSX attributes scanned for hardcoded strings. |
