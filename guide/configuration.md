@@ -31,6 +31,10 @@ Here is a full list of available options:
 | `sortKeys` | `"alpha" \| "source" \| "preserve"` | `"preserve"` | Ordering of keys on writes. |
 | `hardcoded.attributes` | `string[]` | *See below* | HTML/JSX attributes scanned for hardcoded strings. |
 | `hardcoded.ignore` | `string[]` | `[]` | Hardcoded text strings/regex patterns to ignore. |
+| `metadataFile` | `string` | `"metadata.json"` | Path to save extracted translation context metadata relative to `localesDir` (empty/falsy to disable). |
+| `strictFallbacks` | `boolean` | `false` | Fail validation if any translations match their default fallback values (untranslated fallbacks). |
+| `ignoreFallbackKeys` | `string[]` | `[]` | Key patterns (supports wildcards like `brand.*`) to ignore during untranslated fallback validation. |
+| `stubPlaceholder` | `string` | `"key"` | Initial translation value populated during extraction. Mode `"key"` uses the key path, `"default"` copies default language value, or any custom string. Note: `"key"` and `"default"` are reserved mode words. |
 
 ---
 
